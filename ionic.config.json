@@ -1,0 +1,7 @@
+{
+  "name": "BunnMobileApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
