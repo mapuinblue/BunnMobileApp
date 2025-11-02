@@ -26,7 +26,7 @@ Dificultad para mantener la concentración y visualizar el progreso diario de ta
 ## 📱 Capturas de Pantalla
 | Vista Inicial | Gestión de Tareas | Pomodoro Timer | Resumen Diario |
 |---------------|-------------------|----------------|----------------|
-| <img width="250" alt="Pantalla Principal" src="/assets/main-screen.png" /> | <img width="250" alt="Lista de Tareas" src="/assets/tasks-screen.png" /> | <img width="250" alt="Timer Pomodoro" src="/assets/timer-screen.png" /> | <img width="250" alt="Resumen Final" src="/assets/summary-screen.png" /> |
+| <img width="350" height="767" alt="Image" src="https://github.com/user-attachments/assets/30bb81ae-c52f-483c-a306-69772d8d2a3a" /> | <img width="250" alt="Lista de Tareas" src="/assets/tasks-screen.png" /> | <img width="250" alt="Timer Pomodoro" src="/assets/timer-screen.png" /> | <img width="250" alt="Resumen Final" src="/assets/summary-screen.png" /> |
 | Navegación intuitiva | Progreso en tiempo real | Enfoque sin distracciones | Análisis de productividad |
 
 ## ⚙️ Funcionalidades Clave
