@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'BunnMobileApp',
+  appId: 'com.mapuinblue.bunnmobileapp',
+  appName: 'Bunn Productivity Mobile',
   webDir: 'dist'
 };
 
