@@ -8,6 +8,9 @@ import Tasks from './pages/Tasks/Tasks';
 import FinishD from './pages/FinishD/FinishD';
 import SetTask from './pages/SetTask/SetTask';
 import TimerBegins from './pages/TimerBegins/TimerBegins';
+import StopWork from './pages/StopWork/StopWork';
+import StartBreak from './pages/StartBreak/StartBreak';
+import StopBreak from './pages/StopBreak/StopBreak';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -48,6 +51,15 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/timer/timer-begins">
           <TimerBegins />
+        </Route>
+        <Route exact path="/timer/stop-work">
+          <StopWork />
+        </Route>
+        <Route exact path="/timer/start-break">
+          <StartBreak />
+        </Route>
+        <Route exact path="/timer/stop-break">
+          <StopBreak />
         </Route>
         
         <Route exact path="/">

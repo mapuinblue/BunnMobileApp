@@ -39,20 +39,42 @@
   color: white;
 }
 
-.stopBreakDiv #start-timer-btn {
-  font-family: 'Jersey 10', cursive;
-  font-size: 40px;
-  color: white;
-  padding: 8px 40px;
-  background-color: #D57080;
-  border: 4px solid white;
-  border-radius: 10px;
-  box-shadow: 2px 2px 4px #222;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  outline: none;
+/* SOLUCIÓN DEFINITIVA - APUNTAR DIRECTAMENTE AL BOTÓN NATIVO */
+.stopBreakDiv ion-button.start-timer-btn::part(native) {
+  font-family: 'Jersey 10', cursive !important;
+  font-size: 40px !important;
+  color: white !important;
+  background: #D57080 !important;
+  border: 4px solid white !important;
+  border-radius: 10px !important;
+  box-shadow: 2px 2px 4px #222 !important;
+  padding: 8px 40px !important;
 }
 
-.stopBreakDiv #start-timer-btn:hover {
-  transform: scale(1.1) perspective(1px);
+/* Quitar todos los estilos por defecto de Ionic */
+.stopBreakDiv ion-button.start-timer-btn {
+  --background: transparent !important;
+  --background-activated: transparent !important;
+  --background-focused: transparent !important;
+  --background-hover: transparent !important;
+  --border-radius: 0 !important;
+  --border-color: transparent !important;
+  --border-width: 0 !important;
+  --border-style: none !important;
+  --box-shadow: none !important;
+  --padding-start: 0 !important;
+  --padding-end: 0 !important;
+  margin: 16px 0 !important;
+}
+
+/* Efecto hover para el botón nativo */
+.stopBreakDiv ion-button.start-timer-btn::part(native):hover {
+  transform: scale(1.1) !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Estilos para el estado activo/presionado del botón nativo */
+.stopBreakDiv ion-button.start-timer-btn::part(native):active {
+  opacity: 0.9 !important;
+  background: #D57080 !important;
 }

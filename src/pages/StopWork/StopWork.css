@@ -39,20 +39,33 @@
   color: white;
 }
 
-.stopWorkDiv #start-break-btn {
-  font-family: 'Jersey 10', cursive;
-  font-size: 40px;
-  color: white;
-  padding: 8px 40px;
-  background-color: #D57080;
-  border: 4px solid white;
-  border-radius: 10px;
-  box-shadow: 2px 2px 4px #222;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  outline: none;
+/* ESTILOS CORREGIDOS PARA EL BOTÓN */
+.stopWorkDiv .start-break-btn {
+  font-family: 'Jersey 10', cursive !important;
+  font-size: 40px !important;
+  color: white !important;
+  --background: #D57080 !important;
+  --background-activated: #D57080 !important;
+  --background-focused: #D57080 !important;
+  --background-hover: #D57080 !important;
+  --border-radius: 10px !important;
+  --border-color: white !important;
+  --border-width: 4px !important;
+  --border-style: solid !important;
+  --box-shadow: 2px 2px 4px #222 !important;
+  --padding-start: 40px !important;
+  --padding-end: 40px !important;
+  margin: 16px 0 !important;
 }
 
-.stopWorkDiv #start-break-btn:hover {
-  transform: scale(1.1) perspective(1px);
+/* Efecto hover para el botón */
+.stopWorkDiv .start-break-btn:hover {
+  transform: scale(1.1) !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Estilos para el estado activo/presionado */
+.stopWorkDiv .start-break-btn.ion-activated {
+  --background: #D57080 !important;
+  opacity: 0.9 !important;
 }
