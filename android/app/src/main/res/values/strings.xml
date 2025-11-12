@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bunn Productivity Mobile</string>
+    <string name="title_activity_main">Bunn Productivity Mobile</string>
+    <string name="package_name">com.mapuinblue.bunnmobileapp</string>
+    <string name="custom_url_scheme">com.mapuinblue.bunnmobileapp</string>
+</resources>
