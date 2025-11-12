@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.start-break-content {
+  --background: #D57080;
+}
+
+.takingBreakDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  color: white;
+  font-family: 'Chewy', cursive;
+  letter-spacing: 3px;
+}
+
+.takingBreakDiv h1 {
+  text-align: center;
+  letter-spacing: 12px;
+  font-size: 40px;
+  margin-bottom: 64px;
+  color: white;
+}
+
+.takingBreakDiv img {
+  width: 64px;
+  height: 64px;
+  margin-top: 40px;
+}
+
+.takingBreakDiv #task {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.takingBreakDiv #time-remaining {
+  text-align: center;
+  font-size: 196px;
+  letter-spacing: 4px;
+  color: white;
+}

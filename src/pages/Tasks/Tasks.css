@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Pixelify+Sans:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+.tasks-content {
+  --background: #F5DFE2;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+.dashDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 16px;
+}
+
+/* Header Cards: Date and Motivation */
+.header-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.date-card,
+.motivation-card {
+  background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
+  border-radius: 20px;
+  border: 3px solid #ffffff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 140px;
+}
+
+.day {
+  font-family: 'Chewy', cursive;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.number {
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 56px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  background-color: #d57080;
+  padding: 4px 20px;
+  border-radius: 50px;
+  margin: 8px 0;
+}
+
+.month {
+  font-family: 'Chewy', cursive;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.motivation-text {
+  font-family: 'Chewy', cursive;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  line-height: 1.1;
+}
+
+/* Progress Section */
+.progression {
+  background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
+  border-radius: 20px;
+  border: 3px solid #ffffff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progression h3 {
+  font-family: 'Chewy', cursive;
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#progress-bar {
+  appearance: none;
+  height: 20px;
+  width: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#progress-bar::-webkit-progress-bar {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+}
+
+#progress-bar::-webkit-progress-value {
+  background-color: #ffffff;
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+#progress-bar::-moz-progress-bar {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+/* Add Task Section */
+.add-task {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.add-task input {
+  flex: 1;
+  outline: none;
+  border: 2px solid #d4d4d4;
+  background-color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 25px;
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 14px;
+  color: #666;
+}
+
+.add-task input::placeholder {
+  color: #ccc;
+}
+
+.add-task button {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ea6b8f;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(234, 107, 143, 0.3);
+}
+
+#add-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Tasks List */
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  min-height: 300px;
+  background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
+  border-radius: 20px;
+  border: 3px solid #ffffff;
+  padding: 20px;
+  gap: 14px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-section p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 4px 0;
+  gap: 12px;
+}
+
+.task-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.task-checkbox:checked {
+  background-color: #ffffff;
+}
+
+.task-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  color: #ea6b8f;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bottom-section .bx {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.bottom-section p span {
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+}
+
+.bottom-section p span:hover {
+  opacity: 0.8;
+}
+
+/* Bottom Buttons */
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+#finish-btn,
+#timer-btn {
+  font-family: 'Chewy', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
+  border: 3px solid #ffffff;
+  border-radius: 20px;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  outline: none;
+  text-transform: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#finish-btn:hover,
+#timer-btn:hover {
+  transform: scale(1.05);
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: 0.2s ease-in-out;
+}
+
+.hidden {
+  display: none !important;
+}
