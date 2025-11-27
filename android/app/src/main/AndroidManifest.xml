@@ -16,6 +16,11 @@
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask"
             android:exported="true">
+            android:windowSoftInputMode="adjustResize">
+
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".MainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IonContent, IonPage } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
+import { StatusBar } from '@capacitor/status-bar';
 import './Tasks.css';
 
 interface Task {
@@ -24,12 +25,28 @@ const Tasks: React.FC = () => {
   const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
   useEffect(() => {
+  
+    const setupStatusBar = async () => {
+    try {
+      await StatusBar.hide();
+    } catch (error) {
+      console.log('Status bar not available:', error);
+    }
+  };
+
+  setupStatusBar();
+
     const today = new Date();
     setCurrentDate({
       day: weekday[today.getDay()],
       number: today.getDate(),
       month: month[today.getMonth()]
     });
+
+  return () => {
+    StatusBar.show().catch(() => {});
+  };
+
   }, []);
 
   const addTask = () => {
@@ -52,6 +69,10 @@ const Tasks: React.FC = () => {
     setTasks(tasks.map(task => 
       task.id === id ? { ...task, completed: !task.completed } : task
     ));
+  };
+
+    const deleteTask = (id: number) => {
+    setTasks(tasks.filter(task => task.id !== id));
   };
 
   const handleFinishDay = () => {
@@ -138,6 +159,15 @@ const Tasks: React.FC = () => {
                 >
                   {task?.text || ''}
                 </span>
+                {/* BOTÓN DE ELIMINAR */}
+                {task && (
+                  <button 
+                    className="delete-btn"
+                    onClick={() => deleteTask(task.id)}
+                  >
+                    ×
+                  </button>
+                )}
               </p>
             ))}
           </div>
