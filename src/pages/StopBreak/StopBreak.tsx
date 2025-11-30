@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { IonContent, IonPage, IonButton, IonText } from '@ionic/react';
-import { useIonRouter } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
 import './StopBreak.css';
 
 const StopBreak: React.FC = () => {
-  const ionRouter = useIonRouter();
+  const history = useHistory();
   const [task, setTask] = useState('No task available');
 
   useEffect(() => {
@@ -12,9 +12,9 @@ const StopBreak: React.FC = () => {
     setTask(taskValue);
   }, []);
 
-  const handleStartTimer = () => {
-    ionRouter.push('/timer/timer-begins', 'forward', 'push');
-  };
+const handleStartTimer = () => {
+  history.push('/timer/work-timer');
+};
 
   return (
     <IonPage>

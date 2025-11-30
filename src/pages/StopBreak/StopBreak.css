@@ -78,3 +78,44 @@
   opacity: 0.9 !important;
   background: #D57080 !important;
 }
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+  .stopBreakDiv h1 {
+    font-size: 40px;
+    letter-spacing: 6px;
+    margin-bottom: 24px;
+  }
+
+  .stopBreakDiv #task {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .stopBreakDiv #time-remaining {
+    font-size: 80px;
+    letter-spacing: 2px;
+  }
+
+  .stopBreakDiv #start-timer-btn {
+    font-size: 32px;
+    padding: 8px 32px;
+  }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .stopBreakDiv h1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .stopBreakDiv #time-remaining {
+    font-size: 64px;
+  }
+
+  .stopBreakDiv #start-timer-btn {
+    font-size: 28px;
+    padding: 8px 24px;
+  }
+}

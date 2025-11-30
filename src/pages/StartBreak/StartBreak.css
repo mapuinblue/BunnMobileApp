@@ -44,3 +44,40 @@
   letter-spacing: 4px;
   color: white;
 }
+
+/* Media query para pantallas móviles */
+@media (max-width: 768px) {
+  .takingBreakDiv h1 {
+    font-size: 32px;
+    letter-spacing: 6px;
+    margin-bottom: 24px;
+  }
+
+  .takingBreakDiv #task {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  .takingBreakDiv #time-remaining {
+    font-size: 80px;
+    letter-spacing: 2px;
+  }
+
+  .takingBreakDiv img {
+    width: 48px;
+    height: 48px;
+    margin-top: 30px;
+  }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .takingBreakDiv h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  .takingBreakDiv #time-remaining {
+    font-size: 64px;
+  }
+}

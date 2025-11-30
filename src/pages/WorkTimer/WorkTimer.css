@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
-.stop-work-content {
+.work-timer-content {
   --background: #D57080;
 }
 
-.stopWorkDiv {
+.workTimerDiv {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -17,32 +17,50 @@
   letter-spacing: 3px;
 }
 
-.stopWorkDiv h1 {
+.workTimerDiv h1 {
   text-align: center;
   letter-spacing: 12px;
   font-size: 56px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   color: white;
 }
 
-.stopWorkDiv #task {
+.workTimerDiv img {
+  width: 64px;
+  height: 64px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.workTimerDiv #task {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 2px;
   color: white;
+  margin-bottom: 16px;
 }
 
-.stopWorkDiv #time-remaining {
+.workTimerDiv #time-remaining {
   text-align: center;
-  font-size: 196px;
+  font-size: 120px;
   letter-spacing: 4px;
   color: white;
+  line-height: 1;
+  margin: 20px 0;
 }
 
-/* ESTILOS CORREGIDOS PARA EL BOTÓN */
-.stopWorkDiv .start-break-btn {
+.timer-controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ESTILOS CORREGIDOS PARA LOS BOTONES */
+.workTimerDiv .control-btn {
   font-family: 'Jersey 10', cursive !important;
-  font-size: 40px !important;
+  font-size: 28px !important;
   color: white !important;
   --background: #D57080 !important;
   --background-activated: #D57080 !important;
@@ -53,60 +71,71 @@
   --border-width: 4px !important;
   --border-style: solid !important;
   --box-shadow: 2px 2px 4px #222 !important;
-  --padding-start: 40px !important;
-  --padding-end: 40px !important;
-  margin: 16px 0 !important;
+  --padding-start: 24px !important;
+  --padding-end: 24px !important;
+  text-transform: none !important;
+  height: 56px !important;
+  flex: 1 !important;
+  margin: 0 !important;
 }
 
-/* Efecto hover para el botón */
-.stopWorkDiv .start-break-btn:hover {
-  transform: scale(1.1) !important;
+/* Efecto hover para los botones */
+.workTimerDiv .control-btn:hover {
+  transform: scale(1.05) !important;
   transition: transform 0.3s ease !important;
 }
 
 /* Estilos para el estado activo/presionado */
-.stopWorkDiv .start-break-btn.ion-activated {
+.workTimerDiv .control-btn.ion-activated {
   --background: #D57080 !important;
   opacity: 0.9 !important;
 }
 
 /* Media query para pantallas móviles */
 @media (max-width: 768px) {
-  .stopWorkDiv h1 {
+  .workTimerDiv h1 {
     font-size: 40px;
     letter-spacing: 6px;
     margin-bottom: 24px;
   }
 
-  .stopWorkDiv #task {
+  .workTimerDiv #task {
     font-size: 18px;
     padding: 0 20px;
   }
 
-  .stopWorkDiv #time-remaining {
+  .workTimerDiv #time-remaining {
     font-size: 80px;
     letter-spacing: 2px;
   }
 
-  .stopWorkDiv #start-break-btn {
-    font-size: 32px;
-    padding: 8px 32px;
+  .workTimerDiv img {
+    width: 48px;
+    height: 48px;
+    margin-top: 30px;
+  }
+
+  .workTimerDiv .control-btn {
+    font-size: 24px !important;
+    height: 50px !important;
+    --padding-start: 16px !important;
+    --padding-end: 16px !important;
   }
 }
 
 /* Media query para pantallas muy pequeñas */
 @media (max-width: 480px) {
-  .stopWorkDiv h1 {
+  .workTimerDiv h1 {
     font-size: 32px;
     letter-spacing: 4px;
   }
 
-  .stopWorkDiv #time-remaining {
+  .workTimerDiv #time-remaining {
     font-size: 64px;
   }
 
-  .stopWorkDiv #start-break-btn {
-    font-size: 28px;
-    padding: 8px 24px;
+  .workTimerDiv .control-btn {
+    font-size: 20px !important;
+    height: 48px !important;
   }
 }

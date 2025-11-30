@@ -11,6 +11,7 @@ import TimerBegins from './pages/TimerBegins/TimerBegins';
 import StopWork from './pages/StopWork/StopWork';
 import StartBreak from './pages/StartBreak/StartBreak';
 import StopBreak from './pages/StopBreak/StopBreak';
+import WorkTimer from './pages/WorkTimer/WorkTimer';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -61,7 +62,10 @@ const App: React.FC = () => (
         <Route exact path="/timer/stop-break">
           <StopBreak />
         </Route>
-        
+        <Route exact path="/timer/work-timer">
+           <WorkTimer />
+        </Route>
+
         <Route exact path="/">
           <Redirect to="/main" />
         </Route>

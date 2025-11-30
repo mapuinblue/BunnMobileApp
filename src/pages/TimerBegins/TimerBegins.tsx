@@ -10,15 +10,13 @@ const TimerBegins: React.FC = () => {
 
   useEffect(() => {
     // Obtener la tarea del localStorage
-    const taskValue = localStorage.getItem('taskValue');
-    if (taskValue) {
-      setTask(taskValue);
-    }
+    const taskValue = localStorage.getItem('taskValue') || 'No task available';
+    setTask(taskValue);
 
     // Iniciar countdown de 25 minutos
     let duration = 25 * 60; // 25 minutos en segundos
 
-    const interval = setInterval(() => {
+    const updateCountdown = () => {
       const minutes = Math.floor(duration / 60);
       const seconds = duration % 60;
       
@@ -31,7 +29,11 @@ const TimerBegins: React.FC = () => {
         // Navegar a stopWork cuando termine
         history.push('/timer/stop-work');
       }
-    }, 1000);
+    };
+
+    // Llamada inicial para evitar delay de 1 segundo
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
 
     return () => clearInterval(interval);
   }, [history]);
